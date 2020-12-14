@@ -26,7 +26,14 @@ namespace DojoSurveyModel.Controllers
         [HttpPost("results")]
         public IActionResult Submission(Survey yourSurvey)
         {
-            return View("Results", yourSurvey);
+            if (ModelState.IsValid)
+            {
+                return View("Results", yourSurvey);
+            }
+            else
+            {
+                return View("Index", yourSurvey);
+            }
         }
 
         public IActionResult Privacy()
