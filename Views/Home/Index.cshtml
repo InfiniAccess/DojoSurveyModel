@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Dojo Survey Index";
+}
+
+@model Survey
+
+<form action="/results" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Campus"></label>
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <select asp-for="Campus">
+            <option value="Berkley">Berkley</option>
+            <option value="Boise">Boise</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Dallas">Dallas</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Orange County">Orange County</option>
+            <option value="San Jose">San Jose</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Tulsa">Tulsa</option>
+            <option value="Tysons Corner">Tysons Corner</option>
+            <option value="Online">Online</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Language"></label>
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <select asp-for="Language">
+            <option value="Python">Python</option>
+            <option value="Ruby On Rails">Ruby On Rails</option>
+            <option value="MEAN">MEAN</option>
+            <option value="JAVA">JAVA</option>
+            <option value=".NET Core">.NET Core</option>
+            <option value="MERN">MERN</option>
+            <option value="C#">C#</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Comment"></label><br>
+        <span class="text-danger" asp-validation-for="Name"></span>
+        <textarea asp-for="Comment" cols="155" rows="10"></textarea>
+    </div>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,14 @@
+@model Survey
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+<div class="card col-8 mx-auto">
+    <div class="card-body">
+        <h1 class="card-title">Submitted Info</h1>
+        <p class="card-text">Name: @Model.Name</p>
+        <p class="card-text">Dojo Location: @Model.Campus</p>
+        <p class="card-text">Favorite Language: @Model.Language</p>
+        <p class="card-text">Comment: @Model.Comment</p>
+    </div>
+</div>
